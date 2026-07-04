@@ -1,0 +1,14 @@
+<%- include('partials/header') %>
+<%- include('partials/hero') %>
+<section class="features wrap">
+ <% [['▤','Certification Courses','Govt. & Industry Recognized Certificates'],['♙','Experienced Faculty','Learn from Industry Experts'],['▭','Modern Computer Lab','Fully Equipped with Latest Technology'],['▣','Placement Assistance','100% Support for Better Career'],['◎','Result Oriented Training','Practical Knowledge Better Results']].forEach(f=>{ %>
+  <div class="feature"><div class="lineicon"><%=f[0]%></div><div><h4><%=f[1]%></h4><p><%=f[2]%></p></div></div>
+ <% }) %>
+</section>
+<section class="mainrow wrap">
+ <div class="courses-card"><div class="section-head"><h2>▣ POPULAR <span>COURSES</span></h2><a href="/computer-courses">View All Courses →</a></div><div class="course-grid"><% courses.forEach((c,i)=>{ %><article class="course c<%=i%>"><div class="course-icon"><%=c[2]%></div><h3><%=c[0]%></h3><p>Duration: <%=c[1]%></p></article><% }) %></div></div>
+ <div class="achieve"><h2>OUR <span>ACHIEVEMENTS</span></h2><div class="stats"><b>12+<small>Years of Excellence</small></b><b>2500+<small>Students Trained</small></b><b>100+<small>Courses Offered</small></b><b>95%<small>Success Rate</small></b></div><img src="/assets/achievement-boy.png" alt="Student success"><div class="yellow"><strong>🎓 SHAPE YOUR CAREER WITH US</strong><span>Admissions Open for 2025 – Limited Seats!</span><a href="/admissions">APPLY NOW →</a></div></div>
+</section>
+<section class="quick wrap"><% [['▤','Results','Check Your Result','/results'],['▧','Online Admission','Apply Online','/admissions'],['▤','Download Brochure','Course Information','/certification-courses'],['▥','Fee Structure','View Course Fees','/admissions'],['♙','Student Login','Access Your Account','#'],['☎','Contact Us','Get In Touch','/contact-us']].forEach(q=>{ %><a href="<%=q[3]%>"><b><%=q[0]%></b><strong><%=q[1]%></strong><span><%=q[2]%></span></a><% }) %></section>
+
+<%- include('partials/footer') %>
