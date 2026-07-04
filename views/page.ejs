@@ -1,7 +1,0 @@
-<%- include('partials/header') %>
-<section class="inner-hero"><div class="wrap"><h1><%= title %></h1><p><%= text %></p></div></section>
-<section class="content wrap"><div class="content-card"><h2><%= title %></h2><p><%= text %></p>
-<% if(path==='/results'){ %><form class="form"><input placeholder="Enter Roll Number"><input placeholder="Registration Number"><button>Search Result</button></form><% } else if(path==='/admissions'||path==='/contact-us'){ %><form class="form"><input placeholder="Your Name"><input placeholder="Mobile Number"><select><option>Select Course</option><option>Certification Course</option><option>Advanced Excel</option><option>Tally Prime with GST</option></select><button>Submit Enquiry</button></form><% } else { %><div class="cards"><% courses.forEach(c=>{ %><div><h3><%= c[0] %></h3><p>Duration: <%= c[1] %></p></div><% }) %></div><% } %>
-</div></section>
-
-<%- include('partials/footer') %>
